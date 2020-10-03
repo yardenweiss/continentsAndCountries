@@ -6,7 +6,7 @@ module.exports = function (app, config) {
 
     // create new report
     app.get('/test',async function (req, res) {
-
+console.log("heree")
         try {
             const data = ["1111","2222"]
             return res.status(responseService.status.OK).send(data);
