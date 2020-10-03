@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { ContinentsService } from 'src/app/services/continents.service';
 
 @Component({
   selector: 'app-continents',
@@ -15,10 +16,16 @@ export class ContinentsComponent implements OnInit {
   columns = [{ prop: 'name' }, { name: 'Gender' }, { name: 'Company' }];
 
   constructor(private router: Router,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private continentsService:ContinentsService
     ) { }
 
   ngOnInit(): void {
+
+    this.continentsService.getTest()
+      .subscribe(data=>{
+        console.log("---",data)
+      })
   }
 
   public onActivate(event) {
