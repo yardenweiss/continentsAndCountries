@@ -6,7 +6,7 @@ module.exports = function (app, config) {
 
     app.get('/continents/code', cache.cacheMiddleware(),async function (req, res) {
         try {
-            return res.status(responseService.status.OK).send(continentsCode);
+            return res.status(200).send(continentsCode);
         } catch (err) {
             return res.status(500).send(err);
         }
@@ -15,7 +15,7 @@ module.exports = function (app, config) {
     app.get('/continents/:continent', cache.cacheMiddleware() , async function (req, res)  {
         try {
             const data = await continentsRep.getCountries(req.params.continent);
-            return res.status(responseService.status.OK).send(data);
+            return res.status(200).send(data);
         } catch (err) {
             return res.status(500).send(err);
         }

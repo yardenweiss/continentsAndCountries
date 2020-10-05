@@ -13,15 +13,11 @@ export class ConfigService {
   public loadConfig(): Promise<boolean>{
 
     return new Promise((resolve, reject) => {
-      console.log("this.CONFIG_URL",this.CONFIG_URL)
       this.http.get(this.CONFIG_URL)
           .subscribe((data) => {
 
             this.API_URL = (data as any).server;
-         
-              console.log("API_URL ", this.API_URL);
-
-
+            console.log("API_URL ", this.API_URL);
             resolve(true)
   
           }, (error) => {

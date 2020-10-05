@@ -4,49 +4,36 @@
             <mat-icon>arrow_back</mat-icon>
         </button>
         <div class="title">{{continent}}</div>
-
     </mat-toolbar>
 
-    <mat-grid-list fxFlex="1 1 80" cols="4" fxLayout="column">
-        <mat-grid-tile *ngFor="let countrie of countries" fxLayout="column">
-            <div fxFlex="1 1 100" class="wrap">
+    <mat-grid-list fxFlex="1 1 80" cols="4" >
+        <mat-grid-tile *ngFor="let countrie of countries" >
+            <div class="wrap">
                 <mat-card >
-
                     <mat-card-content>
-                        <div>
-                            {{countrie.alpha3Code}}
-                        </div>
+                        <div>{{countrie.alpha3Code}} </div>
 
                         <div fxFlex fxLayout="row" class="countrie-title-wrap">
                             <div class="title">{{countrie.name}}</div>
                             <img class="img" mat-card-image src="{{countrie.flag}}" (error)="onImgError($event)" alt="flag">
-
                         </div>
 
                         <div  class="countrie-data-wrap">
-                        <div *ngIf="countrie.callingCodes && countrie.callingCodes.length >0">
-                            Phone: {{countrie.callingCodes[0]}}
-                        </div>
-                        <div>
-                            Capital: {{countrie.capital}}
 
-                        </div>
+                        <div *ngIf="countrie.callingCodes && countrie.callingCodes.length >0"> Phone: {{countrie.callingCodes[0]}}</div>
 
-                        <div *ngIf="countrie.currencies && countrie.currencies.length > 0 ">
-                            Currency : {{countrie.currencies[0].name}}
+                        <div>  Capital: {{countrie.capital}}</div>
 
-                        </div>
+                        <div *ngIf="countrie.currencies && countrie.currencies.length > 0 ">Currency : {{countrie.currencies[0].name}} </div>
                         <div *ngIf="countrie.languages && countrie.languages.length > 0">Spoken Languages:</div>
+
                         <div  *ngFor="let language of countrie.languages">
                             <div>{{language.name}}</div>
-
                         </div>
                     </div>
-
                     </mat-card-content>
                 </mat-card>
             </div>
         </mat-grid-tile>
     </mat-grid-list>
-
 </div>

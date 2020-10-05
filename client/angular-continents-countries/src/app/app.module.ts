@@ -6,8 +6,6 @@ import { AppComponent } from './app.component';
 import { NgxDatatableModule } from '@swimlane/ngx-datatable';
 import { CountriesComponent } from './components/countries/countries/countries.component';
 import { ContinentsComponent } from './containers/continents/continents/continents.component';
-import { ApiService } from './services/api.service';
-import { ContinentsService } from './services/continents.service';
 import { HttpClientModule } from "@angular/common/http";
 import { ConfigService } from './services/config.service';
 import {MatCardModule} from '@angular/material/card';

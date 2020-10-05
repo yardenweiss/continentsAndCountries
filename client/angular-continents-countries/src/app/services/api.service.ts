@@ -15,10 +15,6 @@ export class ApiService {
     return this.http.get(this.getFullUrl(url));
   }
 
-  public post(url: string, data: any): Observable<any> {
-    return this.http.post(this.getFullUrl(url), data);
-  }
-
   private getFullUrl(url):string {
     return `${this.configService.API_URL.hostname}/${url}`
   
