@@ -2,6 +2,9 @@
 
 This project will display all countries details by region area.
 
+client port is 4300.
+server ports is 3000.
+
 To run the project localy -
 
 1.open a new terminal and run the following commands:
