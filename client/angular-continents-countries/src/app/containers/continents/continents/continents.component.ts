@@ -8,12 +8,8 @@ import { ContinentsService } from 'src/app/services/continents.service';
   styleUrls: ['./continents.component.css']
 })
 export class ContinentsComponent implements OnInit {
-  rows = [
-    { name: 'Austin', gender: 'Male', company: 'Swimlane' },
-    { name: 'Dany', gender: 'Male', company: 'KFC' },
-    { name: 'Molly', gender: 'Female', company: 'Burger King' }
-  ];
-  columns = [{ prop: 'name' }, { name: 'Gender' }, { name: 'Company' }];
+  public rows;
+  columns = [{ prop: 'name' }, { name: 'code' }];
 
   constructor(private router: Router,
     private route: ActivatedRoute,
@@ -22,17 +18,17 @@ export class ContinentsComponent implements OnInit {
 
   ngOnInit(): void {
 
-    this.continentsService.getTest()
+    this.continentsService.getContinentsCode()
       .subscribe(data=>{
-        console.log("---",data)
+        this.rows = data;
       })
   }
 
   public onActivate(event) {
 
     if(event.type === "click" ) {
-      const name = event.row.name;
-      this.router.navigate(['', name], { relativeTo: this.route });
+      const continent = event.row.name;
+      this.router.navigate(['', continent], { relativeTo: this.route });
     }
 
   }

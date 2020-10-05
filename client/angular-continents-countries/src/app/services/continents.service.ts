@@ -12,7 +12,11 @@ export class ContinentsService {
     private apiService: ApiService) {
   }
   
-  public getTest(): Observable<any> {
-    return this.apiService.get(`test`);
+  public getContinentsCode(): Observable<any> {
+    return this.apiService.get(`continents/code`);
+  }
+
+  public getCountries(continent:string): Observable<any> {
+    return this.apiService.get(`continents/${continent}`);
   }
 }

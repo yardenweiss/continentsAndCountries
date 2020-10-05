@@ -10,18 +10,28 @@ import { ApiService } from './services/api.service';
 import { ContinentsService } from './services/continents.service';
 import { HttpClientModule } from "@angular/common/http";
 import { ConfigService } from './services/config.service';
+import {MatCardModule} from '@angular/material/card';
+import {MatGridListModule} from '@angular/material/grid-list';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatIconModule} from '@angular/material/icon';
+import {MatButtonModule} from '@angular/material/button';
 
 @NgModule({
   declarations: [
     AppComponent,
     ContinentsComponent, CountriesComponent
   ],
+  exports:[ ],
   imports: [
     HttpClientModule,
-    
     NgxDatatableModule ,
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    MatButtonModule,MatCardModule,
+    MatGridListModule,
+    MatToolbarModule,
+    MatIconModule
+    
   ],
   providers: [
     {
