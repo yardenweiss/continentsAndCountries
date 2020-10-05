@@ -1,0 +1,46 @@
+.wrap {
+    border: 0.5px solid #dfe6e9;
+    padding: 10px 10px 10px 10px;
+      height: 90%;
+    width: 90%;
+    background-color: white;
+    max-height: 100%;
+    overflow: auto;
+  
+  }
+
+  .conteinar{
+      background-color: whitesmoke;
+  }
+
+  .toolbar{
+      background-color: cornflowerblue;
+  }
+
+  .title{
+      font-size: x-large;
+      max-width: 50%;
+      font-weight: bold;
+
+  }
+
+  .img{
+    max-width: 40%;
+    max-height: 50%;
+    left: 65%;
+     top:5%;
+    position: absolute;
+  }
+
+  .home-card-content{
+      display: flex;
+  }
+
+
+  .countrie-data-wrap{
+    margin-top: 10%
+  }
+
+  .countrie-title-wrap{
+    margin-top: 5%
+  }
