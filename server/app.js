@@ -1,6 +1,7 @@
 require('dotenv').config()
 var express = require('express');
 var config = require('./configuration/config');
+var cors = require('cors');
 
 var initializeControllers = require('./configuration/initControllers');
 
@@ -10,11 +11,10 @@ function initServer() {
 
     // create server object
     app = express();
-    
+    app.use(cors());
 
     // initialize all requires inside controllers directory.
     initializeControllers.loadControllers(config, app);
-
 
     // initialize routes
     require('./configuration/routes')(app);
