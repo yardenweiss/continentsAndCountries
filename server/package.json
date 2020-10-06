@@ -26,6 +26,7 @@
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
     "material-design-icons": "^3.0.1",
+    "memory-cache": "^0.2.0",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
     "zone.js": "~0.10.2"
