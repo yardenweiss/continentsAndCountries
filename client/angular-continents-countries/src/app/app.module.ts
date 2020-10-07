@@ -43,6 +43,9 @@ import {MatButtonModule} from '@angular/material/button';
 })
 export class AppModule { }
 
+
+
 export function loadConfig(configService: ConfigService): (() => Promise<boolean>) {
+
   return (): Promise<boolean> => configService.loadConfig();
 }
