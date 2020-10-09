@@ -16,7 +16,7 @@ export class ApiService {
   }
 
   private getFullUrl(url):string {
-    return `/${url}`
+    return `${this.configService.API_URL.hostname}/${url}`
   
   }
 

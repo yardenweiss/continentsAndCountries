@@ -4,11 +4,9 @@ import { CountriesComponent } from './components/countries/countries/countries.c
 import { ContinentsComponent } from './containers/continents/continents/continents.component';
 
 const routes: Routes = [
-  {
-    path: '',
-    component: ContinentsComponent,
-  },
-  {path: ':continent', component: CountriesComponent }
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
+  {path: 'home', component: ContinentsComponent },
+  {path: ':continent',  component: CountriesComponent }
 
 ];
 

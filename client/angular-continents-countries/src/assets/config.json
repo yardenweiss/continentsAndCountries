@@ -1,4 +1,4 @@
 {
-    "server": {"hostname":""}
+    "server": {"hostname":"http://localhost:3001"}
 
 }

@@ -6,7 +6,7 @@ var rootPath = path.normalize(__dirname + '/..');
 var config = {
     development: {
         root: rootPath,
-            port: process.env.SERVER_PORT || "3000",
+            port: "3001",
             requestTimeout: process.env.REQUEST_TIMEOUT || 20000
     }
 };
