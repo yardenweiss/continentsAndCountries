@@ -1,0 +1,17 @@
+version: '3'
+
+services:
+
+  server-service:
+    build: server/
+    command: node app.js
+    ports: 
+      - "3001:3001"
+
+  client-app:
+    build: client/angular-continents-countries
+    command: npm start
+    ports: 
+      - "4200:4200"
+
+  
