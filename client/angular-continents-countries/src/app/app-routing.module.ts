@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { CountriesComponent } from './components/countries/countries/countries.component';
-import { ContinentsComponent } from './containers/continents/continents/continents.component';
+import { CountriesComponent } from './containers/countries/countries.component';
+import { ContinentsComponent } from './containers/continents/continents.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
